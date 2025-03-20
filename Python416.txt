@@ -73,3 +73,42 @@ git --version
 git init
 - инициализация нового репозитория
 
+git status
+- проверка статуса репозитория
+
+git add -A
+		--all
+		main.py
+		.
+- отслеживает изменения файлов
+
+git config --global user.name 'new_user'
+git config --global user.name
+
+git config --global user.email 'test@mail.ru'
+git config --global user.email
+
+git commit -m "first commit"
+- создание контрольной точки 
+
+test.txt
+
+.gitignore
+
+git add .
+
+git commit -m "added gitignore"
+
+токен
+
+Win + R => control
+
+Диспечер учетных данных
+Учетных данные для Windows
+
+https://github.com
+
+0) git status
+1) git add -A
+2) git commit -m "added print"
+3) git push
