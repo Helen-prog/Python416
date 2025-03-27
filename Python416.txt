@@ -112,3 +112,46 @@ https://github.com
 1) git add -A
 2) git commit -m "added print"
 3) git push
+- переносит текущий локальный коммит в удаленный репозиторий
+
+
+git branch
+- просмотр веток
+
+git branch test
+- создание ветки
+
+git branch -D test
+- удаление ветки
+
+git branch readme
+
+git checkout readme
+- перейти на ветку
+
+readme.md
+
+git checkout master
+
+master   ->    readme
+- readme.md		- readme.md
+
+
+				
+git merge readme
+- слияние веток
+
+git branch -D readme
+
+git log
+- история коммитов
+
+e4b9f916e9118b8b49282e19af62d6305efee85a
+
+
+git clone https://github.com/Helen-prog/Python416.git
+- клонирование репозитория
+
+git pull 
+- забирает изменения с удаленного репозиторий в локальный
+
