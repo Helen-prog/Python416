@@ -170,3 +170,5 @@ class Name:
 public => self.x
 protected => self._x
 private => self.__x
+
+!5 = 1*2*3*4*5
