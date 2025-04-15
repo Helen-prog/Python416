@@ -4379,54 +4379,133 @@
 # acc.withdraw_money(3000)
 # print()
 
-import re
+#
+# from math import sqrt
+#
+#
+# class Area:
+#     __count = 0
+#
+#     @staticmethod
+#     def triangle_area(a, b, c):
+#         p = (a + b + c) / 2
+#         Area.__count += 1
+#         return sqrt(p * (p - a) * (p - b) * (p - c))
+#
+#     @staticmethod
+#     def triangle_area_2(a, h):
+#         Area.__count += 1
+#         return 0.5 * a * h
+#
+#     @staticmethod
+#     def square_area(a):
+#         Area.__count += 1
+#         return a ** 2
+#
+#     @staticmethod
+#     def rectangle_area(a, b):
+#         Area.__count += 1
+#         return a * b
+#
+#     @staticmethod
+#     def get_count():
+#         return Area.__count
+#
+#
+# print("Площадь треугольника по формуле Герона (3,4,5):", Area.triangle_area(3, 4, 5))
+# print("Площадь треугольника по формуле Герона (13,14,15):", Area.triangle_area(13, 14, 15))
+# print("Площадь треугольника через основание и высоту (6,7):", Area.triangle_area_2(6, 7))
+# print("Площадь квадрата (7):", Area.square_area(7))
+# print("Площадь квадрата (8):", Area.square_area(8))
+# print("Площадь квадрата (9):", Area.square_area(9))
+# print("Площадь прямоугольника (2, 6):", Area.rectangle_area(2, 6))
+# print("Количество подсчетов площади:", Area.get_count())
 
 
-class UserData:
-    def __init__(self, fio, old, ps, weight):
-        self.verify_fio(fio)
-        self.verify_old(old)
-        self.verify_weight(weight)
-        self.verify_ps(ps)
+# import re
+#
+#
+# class UserData:
+#     def __init__(self, fio, old, ps, weight):
+#         self.fio = fio
+#         self.old = old
+#         self.password = ps
+#         self.weight = weight
+#
+#     @staticmethod
+#     def verify_fio(fio):
+#         if not isinstance(fio, str):
+#             raise TypeError("ФИО должно быть строкой")
+#         f = fio.split()  # ['Волков', 'Игорь', 'Николаевич!!!']
+#         if len(f) != 3:
+#             raise TypeError("Неверный формат ФИО")
+#         letters = "".join(re.findall(r"[a-zа-яё-]", fio, flags=re.IGNORECASE))  # ВолковИгорьНиколаевич
+#         for s in f:
+#             # print(s.strip(letters))
+#             if len(s.strip(letters)) != 0:
+#                 raise TypeError("В ФИО можно использовать только буквы и дефис")
+#
+#     @staticmethod
+#     def verify_old(old):
+#         if not isinstance(old, int) or not 14 <= old <= 100:  # old < 14 or old > 100
+#             raise TypeError("Возраст должен быть числом в диапазоне от 14 до 100 лет")
+#
+#     @staticmethod
+#     def verify_weight(w):
+#         if not isinstance(w, float) or w < 20:
+#             raise TypeError("Вес должен быть вещественным числом от 20 кг и выше")
+#
+#     @staticmethod
+#     def verify_ps(ps):
+#         if not isinstance(ps, str):
+#             raise TypeError("Паспорт должен быть строкой")
+#         s = ps.split()  # ['1234', '567890']
+#         if len(s) != 2 or len(s[0]) != 4 or len(s[1]) != 6:
+#             raise TypeError("Неверный формат паспорта")
+#         for p in s:
+#             if not p.isdigit():
+#                 raise TypeError("Серия и номер паспорта должны быть числами")
+#
+#     @property
+#     def fio(self):
+#         return self.__fio
+#
+#     @fio.setter
+#     def fio(self, fio):
+#         self.verify_fio(fio)
+#         self.__fio = fio
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, year):
+#         self.verify_old(year)
+#         self.__old = year
+#
+#     @property
+#     def password(self):
+#         return self.__password
+#
+#     @password.setter
+#     def password(self, ps):
+#         self.verify_ps(ps)
+#         self.__password = ps
+#
+#     @property
+#     def weight(self):
+#         return self.__weight
+#
+#     @weight.setter
+#     def weight(self, w):
+#         self.verify_weight(w)
+#         self.__weight = w
+#
+#
+# p1 = UserData("Волков Игорь Николаевич", 26, "1234 567890", 80.8)
+# p1.fio = "Ветров Игорь Николаевич"
+# print(p1.fio)
+# print(p1.__dict__)
 
-        self.__fio = fio
-        self.__old = old
-        self.__password = ps
-        self.__weight = weight
 
-    @staticmethod
-    def verify_fio(fio):
-        if not isinstance(fio, str):
-            raise TypeError("ФИО должно быть строкой")
-        f = fio.split()  # ['Волков', 'Игорь', 'Николаевич!!!']
-        if len(f) != 3:
-            raise TypeError("Неверный формат ФИО")
-        letters = "".join(re.findall(r"[a-zа-яё-]", fio, flags=re.IGNORECASE))  # ВолковИгорьНиколаевич
-        for s in f:
-            # print(s.strip(letters))
-            if len(s.strip(letters)) != 0:
-                raise TypeError("В ФИО можно использовать только буквы и дефис")
-
-    @staticmethod
-    def verify_old(old):
-        if not isinstance(old, int) or not 14 <= old <= 100:  # old < 14 or old > 100
-            raise TypeError("Возраст должен быть числом в диапазоне от 14 до 100 лет")
-
-    @staticmethod
-    def verify_weight(w):
-        if not isinstance(w, float) or w < 20:
-            raise TypeError("Вес должен быть вещественным числом от 20 кг и выше")
-
-    @staticmethod
-    def verify_ps(ps):
-        if not isinstance(ps, str):
-            raise TypeError("Паспорт должен быть строкой")
-        s = ps.split()  # ['1234', '567890']
-        if len(s) != 2 or len(s[0]) != 4 or len(s[1]) != 6:
-            raise TypeError("Неверный формат паспорта")
-        for p in s:
-            if not p.isdigit():
-                raise TypeError("Серия и номер паспорта должны быть числами")
-
-
-p1 = UserData("Волков Игорь Николаевич", 26, "1234 567890", 80.8)
