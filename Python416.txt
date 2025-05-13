@@ -192,3 +192,37 @@ def square(val1, val2):
 	
 square(5)
 square(5, 7)
+
+geometry  => pip
+	rect.py
+	sq.py
+	trian.py
+
+
+import sys
+sys.path
+
+__name__
+
+rect.py => __main__
+main.py => geometry.rect
+
+car
+	__init__.py
+	carclass.py
+	electrocar.py
+	
+Упаковка данных - сохранение данные (сереализация)
+Распаковка данных - получение данных (десереализация)
+
+1. marshal (.pyc)
+2. pickle 
+3. json
+
+dump - сохраняет данные в отрытый файл
+load - считывает данные из файла
+
+dumps - сохраняет данне в строку
+loads - считывает данные из строки
+
+
