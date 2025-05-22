@@ -6502,9 +6502,19 @@ import csv
 # if __name__ == '__main__':
 #     main()
 
+# from parser import Parser
+#
+#
+# def main():
+#     pars = Parser("https://www.ixbt.com/live/index/news/", "news.txt")
+#     pars.run()
+#
+#
+# if __name__ == '__main__':
+#     main()
 
-import requests
 
 
-row = requests.get("https://ru.wordpress.org/plugins/browse/blocks")
-print(row)
+
+
+

@@ -237,10 +237,54 @@ data.csv
 Имя,Профессия,Год рождения
 Виктор,Веб-дизайнер,1995
 Игорь,Программист,1983
+Роман,Администратор,1990
 
-Имя;Профессия;Год рождения
+
 Виктор;Веб-дизайнер;1995
 Игорь;Программист;1983
+Роман;Администратор;1990
+
+csv.reader => []
+csv.DictReader => {}
+
+csv.writer => []
+csv.DictWriter => {}
+
+
+pip install beautifulsoup4 или bs4
+pip install lxml
+
+https://ru.wordpress.org/plugins/browse/blocks/page/1/
+https://ru.wordpress.org/plugins/browse/blocks/page/2/
+https://ru.wordpress.org/plugins/browse/blocks/page/3/
+
+https://ru.wordpress.org/plugins/browse/blocks/page/22/
+
+MVC
+Model (модель)
+View (вид или представлени)
+Controller (контроллер)
+
+articles
+	controller.py
+	model.py
+	view.py
+	project_articles.py
+	
+{
+	"qqq": {
+		"title": "qqq",
+		"author": "www",
+		"pages": "7",
+		"description": "eee"
+	},
+	"aaa": {
+		"title": "aaa",
+		"author": "sss",
+		"pages": "5",
+		"description": "ddd"
+	}
+}
 
 
 
