@@ -286,6 +286,23 @@ articles
 	}
 }
 
+templates 
+	index.html
+	blog.html
+	
+view.py
+
+
+Шаблонизатор
+Jinja
+
+pip install jinja2
+	
+
+{{ ... }} - выражение для вставки конструкции Python
+			в шаблон
+
+{% ... %} - спецификатор шаблона
 
 
 
