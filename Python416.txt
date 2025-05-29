@@ -304,5 +304,21 @@ pip install jinja2
 
 {% ... %} - спецификатор шаблона
 
+{% macro %} - макроопределение (функции)
+
+
+header.html
+main.html
+footer.html
+dialog.html
+
+page.html
+about.html
+
+*.db, *.sqlite
+
+SELECT [ALL | DISTINCT] {*|столбец1 [, столбец2]}
+FROM таблица1 [, таблица2]
+
 
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>Шапка</header>
+
+<ul>
+{% for u in users %}
+    <li>{{ u.name }}</li>
+{% endfor %}
+</ul>
+
+<footer>Подвал</footer>
+</body>
+</html>
