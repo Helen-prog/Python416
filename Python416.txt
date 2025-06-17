@@ -384,6 +384,24 @@ MAX
 Flask
 Django
 
+pip install flask
 
+http://127.0.0.1:5000/
+http://127.0.0.1:5000/about
+http://127.0.0.1:5000/index
+http://127.0.0.1:5000/profile/admin
 
-
+one
+	flsite.py
+	templates
+		index.html
+		about.html
+	static
+		css
+			style.css
+		
+		
+int - должны присутствовать только цифры
+float - может записываться число с плавающей точкой
+path - можно использовать любые допустимые символы URL
+	плюс симвло слеша ("/")
