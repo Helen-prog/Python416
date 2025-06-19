@@ -1,7 +1,8 @@
 body {
-    background: yellow;
+    background: lightyellow;
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .menu{
     display: flex;
@@ -10,6 +11,10 @@ body {
     background: orange;
     padding: 20px;
     margin-top: 0;
+}
+.menu a{
+    font-weight: bold;
+    color: brown;
 }
 .content{
     max-width: 1200px;

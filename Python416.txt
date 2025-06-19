@@ -405,3 +405,12 @@ int - должны присутствовать только цифры
 float - может записываться число с плавающей точкой
 path - можно использовать любые допустимые символы URL
 	плюс симвло слеша ("/")
+	
+flash()
+get_flashed_messages()
+
+import os
+os.urandom(20).hex()
+
+from two.sitedb import create_db
+create_db()
