@@ -414,3 +414,18 @@ os.urandom(20).hex()
 
 from two.sitedb import create_db
 create_db()
+
+http://127.0.0.1:5000/post/1
+
+pip install django
+
+first
+
+cd first 
+- зайти в папку
+
+django-admin startproject password_generator_project
+- создание проекта
+
+
+
