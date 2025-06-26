@@ -427,5 +427,7 @@ cd first
 django-admin startproject password_generator_project
 - создание проекта
 
+cd password_generator_project
 
-
+python manage.py runserver
+- запустить сервер
