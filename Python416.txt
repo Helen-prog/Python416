@@ -431,3 +431,15 @@ cd password_generator_project
 
 python manage.py runserver
 - запустить сервер
+
+python manage.py startapp generator
+- создание нового приложения
+
+Ctrl + C 
+- остановить сервер
+
+templates
+	generator
+		home.html
+		
+http://127.0.0.1:8000/?length=2
