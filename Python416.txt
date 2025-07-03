@@ -443,3 +443,25 @@ templates
 		home.html
 		
 http://127.0.0.1:8000/?length=2
+
+cd ../..
+
+second
+cd second
+django-admin startproject personal_portfolio
+cd personal_portfolio
+python manage.py runserver
+
+python manage.py startapp skills
+python manage.py startapp blog
+
+pip install Pillow
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
+- создание суперпользователя
+
+http://127.0.0.1:8000/blog
+http://127.0.0.1:8000/blog/1
