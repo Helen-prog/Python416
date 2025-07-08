@@ -465,3 +465,34 @@ python manage.py createsuperuser
 
 http://127.0.0.1:8000/blog
 http://127.0.0.1:8000/blog/1
+
+third
+
+cd third
+django-admin startproject todos
+
+cd todos
+python manage.py startapp todo
+
+python manage.py migrate
+
+1jP1od1UKuILvcMUXRjeGK27KXDJXVuCfYOWiCRb9VPwSsVrmzLLPZapGLJkjITG
+B4sT0usRe7MSYEReEbovDjMGzG0jXeuTPJrOUTi8DyTDlU0L3TQ2MyUYvu6Uj1TX
+
+python manage.py createsuperuser
+
+static
+	css
+		style.css
+		
+{% extends 'todo/base.html' %}
+{% block content %}
+<div class="center">
+ <h1>Система для обслуживания клиентов</h1>
+ <p>Развивайте свой бизнес с помощью продвинутой, но простой в использовании платформы Upservice</p>
+ <h2>Для чего нужен Upservice</h2>
+ <p>Upservice – это платформа для контроля и управления вашим бизнесом.</p>
+ <p>Помогает находить слабые стороны в работе сотрудников и улучшать уровень обслуживания клиентов.</p>
+</div>
+{% endblock %}
+		

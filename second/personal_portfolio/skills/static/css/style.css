@@ -54,3 +54,66 @@ h2{
 .img img{
     border: 6px solid #FFF;
 }
+
+
+.top{
+    background: #663366;
+    margin: 0;
+}
+
+.top a{
+    color: #FFF;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: left;
+}
+
+.blog_text{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.count{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.detail{
+    background: #FFF;
+    padding: 20px 20px 60px;
+    box-sizing: border-box;
+}
+
+
+.menu{
+    background: lightyellow;
+    padding: 10px;
+    border-bottom: 6px solid #FFF;
+}
+
+.menu .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: #663366;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 20px;
+}
+
+.menu li{
+    margin-left: 40px;
+}
+
