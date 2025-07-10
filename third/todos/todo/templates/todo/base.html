@@ -12,6 +12,7 @@
         <ul>
         {% if user.is_authenticated %}
             <li class="logo">Пользователь: {{ user.username }}</li>
+            <li><a href="{% url 'createtodo' %}">Создать</a></li>
             <li><a href="{% url 'currenttodos' %}">Актуальные</a></li>
             <li>
                 <form action="{% url 'logoutuser' %}" method="post">
@@ -21,7 +22,7 @@
             </li>
         {% else %}
             <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
-            <li><a href="">Войти</a></li>
+            <li><a href="{% url 'loginuser' %}">Войти</a></li>
         {% endif %}
         </ul>
     </div>
