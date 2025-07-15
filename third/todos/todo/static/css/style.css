@@ -94,3 +94,19 @@ input{
     padding: 20px;
     text-decoration: none;
 }
+
+.but{
+    display: flex;
+    align-items: flex-end;
+}
+
+.good{
+    background: teal;
+}
+.remove{
+    background: orangered;
+}
+
+a b {
+    color: orangered;
+}
