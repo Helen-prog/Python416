@@ -22,4 +22,24 @@
     {% endfor %}
 </ul>
 
+<table border="1">
+    <tr>
+        {% for todo in todos %}
+        <td>
+            <a href="{% url 'viewtodo' todo.id %}">
+                {% if todo.important %}
+                <b>{{ todo.title }}</b>
+                {% else %}
+                {{ todo.title }}
+                {% endif %}
+
+                {% if todo.memo %}
+                 - {{ todo.memo }}
+                {% endif %}
+            </a>
+        </td>
+    {% endfor %}
+    </tr>
+</table>
+
 {% endblock %}

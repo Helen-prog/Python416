@@ -507,3 +507,26 @@ models.SET_DEFAULT - задачи остануться в бд, даже при 
 
 
 forms.py
+
+
+http://127.0.0.1:8000/create
+
+
+fourth
+cd fourth
+
+django-admin startproject devsearch
+cd devsearch
+
+python manage.py startapp projects
+
+projects
+	templates
+		projects
+			base.html
+			navbar.html
+			projects.html
+	static
+		images
+		styles
+		uikit
