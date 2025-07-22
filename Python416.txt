@@ -530,3 +530,19 @@ projects
 		images
 		styles
 		uikit
+		
+
+OneToOneField - один к одному		
+ForeignKey - один ко многим
+ManyToManyField - многие ко многим
+
+
+Project.objects.all()
+Project.objects.get(id=1)
+Project.objects.filter(id=1)
+Project.objects.filter(title__startswith="Website")
+Project.objects.filter(title__contains="site")
+Project.objects.exclude(title__startswith="Website")
+
+
+https://www.freelancer.com/u/happyweekend?from=portfolios
