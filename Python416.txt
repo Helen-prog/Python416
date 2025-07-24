@@ -519,6 +519,7 @@ django-admin startproject devsearch
 cd devsearch
 
 python manage.py startapp projects
+python manage.py startapp users
 
 projects
 	templates
