@@ -1,6 +1,12 @@
 from django.forms import ModelForm
-from .models import Project
+from .models import Project, Review
 from django import forms
+
+
+class ReviewForm(ModelForm):
+    class Meta:
+        model = Review
+        fields = ['value', 'body']
 
 
 class ProjectForm(ModelForm):
