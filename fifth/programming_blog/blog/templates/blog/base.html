@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="header">
+    <div class="wrap">
+        <ul class="mainmenu">
+            <li class="logo"><a href="{% url 'index' %}">Logo</a></li>
+            {% for m in menu %}
+            <li class="last"><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div class="wrap">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
