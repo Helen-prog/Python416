@@ -7,8 +7,15 @@
 <ul>
     {% for p in posts %}
     <li>
-        <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
-        <p>{{ p.content|truncatewords:50 }}</p>
+        <p class="first">Категория: {{ p.cat }}</p>
+        <div class="text">
+            {% if p.photo %}
+            <img src="{{ p.photo.url }}" class="image" alt="">
+            {% endif %}
+            <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
+            <p>{{ p.content|truncatewords:50 }}</p>
+        </div>
+        <p class="date">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</p>
     </li>
     {% endfor %}
 </ul>

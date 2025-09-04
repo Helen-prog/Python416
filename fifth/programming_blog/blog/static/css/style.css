@@ -14,6 +14,7 @@ body{
     background: #FFF;
     padding: 40px;
     box-sizing: border-box;
+    display: flex;
 }
 ul{
     list-style: none;
@@ -38,4 +39,85 @@ a:hover{
     font-size: 20px;
     font-weight: bold;
     padding: 20px 0;
+}
+
+.sidebar ul{
+    width: 320px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.sidebar a{
+    padding: 20px;
+    display: block;
+    border: 1px solid #FFF;
+    background:  #264b5d;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.selected{
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid #FFF;
+    font-weight: bold;
+    background: #81d4fa;
+}
+
+.main li{
+    border: 1px solid #264b5d;
+    margin-bottom: 40px;
+}
+
+.first, .date{
+    padding: 10px 20px;
+    background: #264b5d;
+    font-size: 18px;
+    color: #FFF;
+    margin: 0;
+}
+
+.image {
+    max-width: 50%;
+    float: left;
+    margin-right: 20px;  
+}
+
+.text{
+    padding: 20px 20px 0;
+}
+.text h2{
+    margin-top: 0;
+}
+.text a{
+    padding-left: 0;
+}
+.text a:hover{
+    color: #264b5d;
+}
+.post h2{
+    margin-top: 0;
+}
+.post{
+    font-size: 16px;
+}
+
+.form-input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+button{
+    background: #81d4fa;
+    border: 2px solid #264b5d;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+form label {
+    font-size: 18px;    
 }

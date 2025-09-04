@@ -566,3 +566,15 @@ http://127.0.0.1:8000/projects/?search_query=web&page=2
 
 [1, 2, 3, 7]
 
+fifth
+cd fifth
+
+django-admin startproject programming_blog
+
+cd programming_blog
+python manage.py startapp blog
+
+templatetags
+	__init__.py
+	blog_tags.py
+	
