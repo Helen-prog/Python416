@@ -3,11 +3,15 @@ from django.db.models import Count
 
 menu = [
     {'title': "Добавить статью", "url_name": 'add_page'},
-    {'title': "Войти", "url_name": 'index'}
+    {'title': "Обратная связь", "url_name": 'contact'},
+    # {'title': "Регистрация", "url_name": 'register'},
+    # {'title': "Войти", "url_name": 'login'},
 ]
 
 
 class DataMixin:
+    paginate_by = 2
+
     def get_user_context(self, **kwargs):
         context = kwargs
         cats = Category.objects.annotate(Count('blog'))

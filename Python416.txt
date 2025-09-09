@@ -578,3 +578,7 @@ templatetags
 	__init__.py
 	blog_tags.py
 	
+	
+Mixins
+
+utils.py
