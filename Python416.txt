@@ -582,3 +582,38 @@ templatetags
 Mixins
 
 utils.py
+
+
+django-simple-captcha
+
+python manage.py collectstatic
+
+git clone https://github.com/Helen-prog/blog.git
+
+ls
+- просмотр каталога
+
+cd blog
+
+
+mkvirtualenv --python=/usr/bin/python3.13 blogvenv
+mkvirtualenv --python=/usr/bin/python3.9 blogvenv
+
+deactivate
+- для выхода из виртуального окружения
+
+workon blogvenv
+- для повторного входа
+
+pip install django
+pip install pillow
+pip install django-simple-captcha
+pip install django-ckeditor
+
+
+pwd
+- просмотр пути к папке
+
+/home/HelenKozovyakina/blog
+/home/HelenKozovyakina/blog/static
+/home/HelenKozovyakina/blog/media

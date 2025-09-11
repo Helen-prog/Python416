@@ -1,0 +1,13 @@
+#header, .module caption{
+    background: #446600;
+}
+
+a:link, a:visited{
+    color: #00ff2f;
+}
+
+#changelist-filter h2,
+div.breadcrumbs
+{
+    background: #253800;
+}
