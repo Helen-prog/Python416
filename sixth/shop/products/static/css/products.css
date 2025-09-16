@@ -1,0 +1,48 @@
+body {
+    padding-top: 56px;
+}
+a{
+    color: #008819; 
+}
+a:hover{
+    color: #01b50d; 
+}
+.page-link{
+    color: #01b50d; 
+}
+.page-link:hover{
+    color: #008819; 
+}
+.page-item.active .page-link{
+    background: #28a745;
+}
+.list-group-item{    
+    text-transform: uppercase;
+}
+.col-lg-9{
+    margin: 24px 0;
+}
+.title{
+    color: #28a745;
+}
+.big{
+    width: 100%;
+	margin-top: 10px;
+}
+.price{
+    color: orange;
+    margin: 20px 0;
+}
+.basket{
+    margin: 0 0 40px;
+}
+.quantity{
+    margin-bottom: 20px;
+}
+.small{
+    width: 26%;
+    margin: 20px 10px;
+}
+.center{
+    text-align: center;
+}

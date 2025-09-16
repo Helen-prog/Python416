@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/third/todos" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/fourth/devsearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/fifth/programming_blog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sixth/shop" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.13 (416)" jdkType="Python SDK" />
