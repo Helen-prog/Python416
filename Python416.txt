@@ -617,3 +617,10 @@ pwd
 /home/HelenKozovyakina/blog
 /home/HelenKozovyakina/blog/static
 /home/HelenKozovyakina/blog/media
+
+django-admin startproject shop
+python manage.py startapp products
+
+change_list.html
+
+csv_uploader.html
