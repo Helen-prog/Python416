@@ -36,9 +36,8 @@
                     <h1 class="title">{{ product.name }}</h1>
                     <h4>{{ product.short_description }}</h4>
                     <h2 class="price">{{ product.price }} руб.</h2>
-                    <button type="button" class="btn
-btn-outline-success basket">Отправить в корзину
-                            </button>
+
+                    <a href="{% url 'basket_add' product.id %}" class="btn btn-outline-success  basket">Отправить в корзину</a>
 <!--                    <h4 class="basket"><a href="#">В КОРЗИНУ</a></h4>-->
                     <h5 class="quantity">В наличии: {{ product.quantity }} шт.</h5>
                     <div>

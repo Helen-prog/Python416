@@ -625,3 +625,8 @@ python manage.py startapp users
 change_list.html
 
 csv_uploader.html
+
+
+reset_password_sent.html
+reset.html
+reset_password_complete.html

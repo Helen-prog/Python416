@@ -6,6 +6,8 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import EmailVerification, User
+from products.models import Basket
+from django.contrib.auth.decorators import login_required
 
 
 class EmailVerificationView(TemplateView):
@@ -51,7 +53,6 @@ def register(request):
     if request.method == "POST":
         form = UserRegistrationForm(data=request.POST)
         if form.is_valid():
-
             # username = form.cleaned_data['username']
             # email = form.cleaned_data['email']
             # subject = 'Ваш аккаунт создан'
@@ -79,17 +80,27 @@ def register(request):
     return render(request, 'users/register.html', context)
 
 
+@login_required(login_url='/users/login/')
 def profile(request):
+    user = request.user
     if request.method == "POST":
-        form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
+        form = UserProfileForm(data=request.POST, files=request.FILES, instance=user)
         if form.is_valid():
             form.save()
             return redirect('profile')
     else:
-        form = UserProfileForm(instance=request.user)
+        form = UserProfileForm(instance=user)
+
+    baskets = Basket.objects.filter(user=user)
+    total_quantity = sum(basket.quantity for basket in baskets)  # [3, 2]
+    total_sum = sum(basket.sum() for basket in baskets)  # [3597.00, 5878.00]
+
     context = {
         'title': "Store - Профиль",
-        'form': form
+        'form': form,
+        'baskets': Basket.objects.filter(user=user),
+        'total_quantity': total_quantity,
+        'total_sum': total_sum,
     }
     return render(request, 'users/profile.html', context)
 
@@ -97,4 +108,3 @@ def profile(request):
 def logout(request):
     auth.logout(request)
     return redirect('index')
-
