@@ -630,3 +630,21 @@ csv_uploader.html
 reset_password_sent.html
 reset.html
 reset_password_complete.html
+
+SQL Shell (psql)
+
+\l
+\! chcp 1251
+
+store_shop_db - имя базы данных
+store_user - имя пользователя БД
+store_shop - пароль
+
+
+CREATE DATABASE store_shop_db;
+DROP DATABASE store_shop_db;
+
+\c store_shop_db
+store_shop_db=#\conninfo
+
+CREATE ROLE store_user with password 'store_shop';
