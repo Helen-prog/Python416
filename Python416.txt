@@ -621,6 +621,7 @@ pwd
 django-admin startproject shop
 python manage.py startapp products
 python manage.py startapp users
+python manage.py startapp orders
 
 change_list.html
 
@@ -648,3 +649,12 @@ DROP DATABASE store_shop_db;
 store_shop_db=#\conninfo
 
 CREATE ROLE store_user with password 'store_shop';
+ALTER ROLE "store_user" WITH LOGIN;
+
+GRANT ALL PRIVILEGES ON DATABASE "store_shop_db" to store_user;
+ALTER USER store_user CREATEDB;
+
+grant usage on schema public to public;
+grant create on schema public to public;
+
+pip install psycopg2
