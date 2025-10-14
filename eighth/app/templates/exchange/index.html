@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="form-wrap">
+        <h3>Конвертор валют</h3>
+
+        <div class="content">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="form">
+                    <input type="number" name="from-amount" placeholder="Сумма" class="form-control"
+                           {% if from_amount %}
+                           value="{{ from_amount }}"
+                           {% endif %}
+                    >
+                    <select name="from-curr" class="form-control">
+                        {% for curr in currencies %}
+                        <option value="{{ curr }}"
+                                {% if from_curr == curr %}
+                                selected
+                                {% endif %}>{{ curr }}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="to-curr" class="form-control">
+                         {% for curr in currencies %}
+                        <option value="{{ curr }}"
+                            {% if to_curr == curr %}
+                             selected
+                            {% endif %}
+                        >{{ curr }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <hr>
+                {% if convert_amount %}
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Отдаем <b>{{ from_curr }}</b> Получаем <b>{{ to_curr }}</b></h5>
+                    </div>
+                    <div class="card-body">
+                        {{ convert_amount }}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="submit-btn">
+                    <button>Рассчитать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

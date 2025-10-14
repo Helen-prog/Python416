@@ -658,3 +658,42 @@ grant usage on schema public to public;
 grant create on schema public to public;
 
 pip install psycopg2
+
+
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/orders/
+
+http://127.0.0.1:8000/orders/order/9/
+
+django-admin startproject landing_page
+
+python manage.py startapp cms
+python manage.py startapp price
+python manage.py startapp crm
+python manage.py startapp telebot
+
+
+@BotFather
+/newbot
+Бот обработчик заявок с сайта
+bot_testSend_messageBot
+
+Use this token to access the HTTP API:
+8072178120:AAGhmqubfrtneaY1tItbl4uRwNvGznY8Ejc
+
+https://api.telegram.org/bot8072178120:AAGhmqubfrtneaY1tItbl4uRwNvGznY8Ejc/sendMessage?chat_id=-4907563325&text=тест
+
+
+Ctrl + F
+Заявки с сайта
+
+@get_id_bot
+
+/my_id@get_id_bot
+
+Chat ID :-4907563325
+
+
+sendmessage.py
+
+requests
